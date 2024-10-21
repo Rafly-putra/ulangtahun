@@ -1,0 +1,161 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.left, .right {
+    position: absolute;
+    top: 0;
+    width: 50%;      /* Setengah layar */
+    height: 100%;     /* Penuh secara vertikal */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%); /* Redupkan sedikit foto */
+  }
+
+  .left {
+    left: 0;
+    background-image: url('assets/left.jpeg');  /* Gambar kiri */
+  }
+  
+  .right {
+    right: 0;
+    background-image: url('assets/right.JPG'); /* Gambar kanan */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 182, 193, 0.6); /* Pink transparan */
+    z-index: 0;
+  }
+  
+  .container {
+    text-align: center;
+    color: #ffffff;
+    max-width: 600px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .headline {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .message {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: slideIn 2s ease-in-out;
+  }
+  
+  .btn {
+    background-color: #ff6f61;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff3e30;
+  }
+
+  /* Efek blur saat kejutan aktif */
+.background-wrapper.active {
+    filter: blur(8px) brightness(50%);
+    transition: 0.1s ease-in-out;
+    -webkit-transition: 0.1s ease-in-out;
+    -moz-transition: 0.1s ease-in-out;
+    -ms-transition: 0.1s ease-in-out;
+    -o-transition: 0.1s ease-in-out;
+    -webkit-filter: blur(8px) brightness(50%);
+}
+  
+  /* Sembunyikan popup secara default */
+  .popup.hidden {
+    display: none;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(185, 60, 60);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .balloons {
+    width: 100px;
+    margin: 10px 0;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .close-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .close-btn:hover {
+    background-color: #ff3e30;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @media (max-width: 768px) {
+    .headline {
+        font-size: 2rem; /* Menyesuaikan ukuran font untuk layar kecil */
+    }
+
+    .message {
+        font-size: 1.2rem; /* Menyesuaikan ukuran font untuk layar kecil */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Mengurangi padding untuk tombol di layar kecil */
+    }
+}

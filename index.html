@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="javascript.js"></script>
+</head>
+<body>
+    <div class="left"></div>  <!-- Foto Kiri -->
+    <div class="right"></div> <!-- Foto Kanan -->
+    
+    <div class="overlay"></div>
+
+    <div class="container">
+      <h1 class="headline">🎉 Happy Birthday, Sayang! 🎉</h1>
+      <p class="message">Semoga hari ini menjadi awal dari tahun yang penuh kebahagiaan, cinta, dan kesuksesan. Aku bersyukur selalu ada kamu di hidupku ❤️</p>
+      
+      <div class="background-wrapper"></div>
+
+      <button class="btn" id="surpriseBtn">Klik untuk Kejutan 🎁</button>
+    
+      <audio id="bgMusic" src="assets/happy-birthday.mp3" preload="auto"></audio>
+
+    <div class="popup hidden" id="popup">
+      <img src="assets/balloons.gif" alt="Balloons" class="balloons">
+      <h2>🎂 Selamat Ulang Tahun!</h2>
+      <p>Harapan terbaikku untukmu, semoga kamu selalu bahagia dan semua impianmu tercapai! 🎈</p>
+      <button class="close-btn" id="closeBtn">Tutup</button>
+    </div>
+  </div>
+</body>
+</html>
